@@ -1,0 +1,24 @@
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<h1 style="text-align: center;">Create New Grocery List</h1>
+
+<br><br>
+
+<div class="card">
+    <div class="card-body">
+        <form [formGroup]="newlistgroup" (submit)='createList'>
+            <div class="form-group">
+                <label for="nameOfList"><b>Enter Grocery List Name</b></label>
+                <input type="text" class="form-control" placeholder="Grocery List Name" id="nameOfList" formControlName="nameOfList">
+            </div>
+            <div class="form-group">
+                <label for="groceryStoreName"><b>Enter Grocery Store Name</b></label>
+                <input type="text" class="form-control" placeholder="Grocery Store Name" id="groceryStoreName" formControlName="groceryStoreName">
+            </div>
+            <br>
+            <button id = "submit" class="btn btn-primary" (click)="createList(newlistgroup)">Create
+                List</button>
+        </form>
+    </div>
+</div>
