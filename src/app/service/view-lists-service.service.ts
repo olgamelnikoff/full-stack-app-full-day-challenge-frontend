@@ -22,7 +22,7 @@ export class ViewListsServiceService {
 
   postList(newList:GroceryList): Observable<string>{
     console.log(newList);
-    return this.httpCli.post<string>(this.createNewListUrl, JSON.stringify(GroceryList), {
+    return this.httpCli.post<string>(this.createNewListUrl, JSON.stringify(newList), {
         headers: new HttpHeaders({
             'Content-Type':'application/json'
         }),

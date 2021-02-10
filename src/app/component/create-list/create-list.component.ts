@@ -1,4 +1,4 @@
-import { Component, OnChanges, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { GroceryList } from 'src/app/model/list';
@@ -13,11 +13,11 @@ export class CreateListComponent implements OnInit {
 
   pageTitle = "Create New Grocery List";
 
-  constructor(private router: Router, private viewListsService: ViewListsServiceService) { }
-
   nameOfList: string;
   groceryStoreName: string;
   //listId: number;
+
+  constructor(private router: Router, private viewListsService: ViewListsServiceService) { }
   
   newList: GroceryList = {
     'listId': 0,
@@ -34,15 +34,12 @@ export class CreateListComponent implements OnInit {
   }
 
   createList(listGroup: FormGroup): void {
-    this.newList.nameOfList = this.nameOfList;
-    this.newList.groceryStoreName = this.groceryStoreName;
+    this.newList.nameOfList = this.newlistgroup.get('nameOfList').value;
+    this.newList.groceryStoreName = this.newlistgroup.get('groceryStoreName').value;
     console.log(this.newList);
     this.viewListsService.postList(this.newList).subscribe(
       response => {
-        console.log(response);
-        window.alert("A new list was created");
       }, error => {
-        window.alert("Could not create a new list");
       }
     )
   }
