@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { GroceryList } from 'src/app/model/list';
 import { ViewListsServiceService } from 'src/app/service/view-lists-service.service';
 
@@ -13,7 +14,7 @@ export class ViewListsComponent implements OnInit {
 
   //private gListServ: ViewListService;
 
-  constructor(private gListServ: ViewListsServiceService) { }
+  constructor(private gListServ: ViewListsServiceService, private router : Router) { }
 
   ngOnInit(): void {
     this.getAllGroceryLists();
@@ -36,4 +37,10 @@ export class ViewListsComponent implements OnInit {
       .subscribe(data => {
       })
   }
+
+  /* goToAddItemFormPage(groceryListId: number) {
+    //this.jobPostingId = groceryListId;
+    localStorage.setItem("groceryListId", JSON.stringify(groceryListId));
+    this.router.navigate([`grocery-lists/${groceryListId}/item/new`]);
+  } */
 }

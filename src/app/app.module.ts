@@ -7,13 +7,15 @@ import { ViewListsComponent } from './component/view-lists/view-lists.component'
 import { CreateListComponent } from './component/create-list/create-list.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddItemComponent } from './component/add-item/add-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     ViewListsComponent,
-    CreateListComponent
+    CreateListComponent,
+    AddItemComponent
   ],
   imports: [
     BrowserModule,

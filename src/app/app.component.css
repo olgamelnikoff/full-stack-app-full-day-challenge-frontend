@@ -1,9 +1,9 @@
 .image{
-    height: 200pt;
+    height: 100%;
 
    
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image:url('C:\Users\Olyun\Documents\VisualStudioCode\DEC_JWS_VSC\Angular\GroceriesChallengeFrontend\src\assets\groceries.jpg'); 
+    background-image:url('C:\Users\Olyun\Documents\VisualStudioCode\DEC_JWS_VSC\Angular\GroceryLists\src\assets\groceries.jpg'); 
   }
