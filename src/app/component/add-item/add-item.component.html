@@ -1,1 +1,25 @@
-<p>add-item works!</p>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<div class="card">
+    <div class="card-body">
+        <form [formGroup]="newitemgroup" (submit)='createItem'>
+            <div class="form-group">
+                <label for="itemName"><b>Enter Item Name</b></label>
+                <input type="text" class="form-control" placeholder="Item Name" id="itemName" formControlName="itemName">
+            </div>
+            <div class="form-group">
+                <label for="itemCost"><b>Enter Item Cost</b></label>
+                <input type="text" class="form-control" placeholder="Item Cost" id="itemCost" formControlName="itemCost">
+            </div>
+            <div class="form-group">
+                <label for="itemType"><b>Enter Item Type</b></label>
+                <input type="text" class="form-control" placeholder="Item Type" id="itemType" formControlName="itemType">
+            </div>
+            <br>
+            <button id = "submit" class="btn btn-primary" (click)="createItem(newitemgroup)">Create
+                List</button>
+        </form>
+    </div>
+</div>

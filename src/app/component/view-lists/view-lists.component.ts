@@ -38,9 +38,8 @@ export class ViewListsComponent implements OnInit {
       })
   }
 
-  /* goToAddItemFormPage(groceryListId: number) {
-    //this.jobPostingId = groceryListId;
+  goToAddItemFormPage(groceryListId: number) {
     localStorage.setItem("groceryListId", JSON.stringify(groceryListId));
-    this.router.navigate([`grocery-lists/${groceryListId}/item/new`]);
-  } */
+    this.router.navigate(['grocery-lists/item/new']);
+  }
 }

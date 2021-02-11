@@ -24,6 +24,7 @@ import { AddItemComponent } from './component/add-item/add-item.component';
     RouterModule.forRoot([
       {path: 'grocery-lists/new', component: CreateListComponent},
       {path: 'grocery-lists/all', component: ViewListsComponent},
+      {path: 'grocery-lists/item/new', component: AddItemComponent},
       {path: '**', redirectTo : 'grocery-lists/all'}
     ])
   ],
